@@ -52,7 +52,7 @@
   - 매개변수
     - `callback`
       - 새로운 배열 요소를 생성하는 함수
-      - 인수 `currentValue` : 배열의 오소 중, 현재 처리되고 있는 요소
+      - 인수 `currentValue` : 배열의 요소 중, 현재 처리되고 있는 요소
       - 인수 `index` : 현재 처리되는 요소의 배열 내 인덱스
       - 인수 `array` : map 메소드가 적용되는 본래 배열
     - `thisArg`
@@ -96,7 +96,7 @@
 
       - 정렬 순서를 정의하는 함수를 지정함 (생략하면 각 요소의 문자열 변환에 따라 각 문자의 유니 코드 포인트 값에 따라 정렬됨)
 
-      - `compareFunction(a, b)`이 0보다 작은 경우 a를 b보다 낮은 색은으로 정렬함(오름차순)
+      - `compareFunction(a, b)`이 0보다 작은 경우 a를 b보다 낮은 색인으로 정렬함(오름차순)
 
         `compareFunction(a, b)`이 0보다 큰 경우, b를 a보다 낮은 인덱스로 소트함(내림차순)
 
@@ -186,7 +186,7 @@ inventors.sort(function (a, b) {
 ```javascript
 const category = document.querySelector('.mw-category');
 const nodes = category.querySelectorAll('a'); // NodeList로 반환됨
-// const links = [...nodes];
+const links = [...nodes];
 const links = Array.from(nodes);
 
 const de = links
@@ -217,6 +217,10 @@ people.sort((a, b) => {
     return aLastName > bLastName ? 1 : -1;
 });
 ```
+
+- 비구조화 할당
+
+> https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 
 ### 8. Reduce Exercise
 
